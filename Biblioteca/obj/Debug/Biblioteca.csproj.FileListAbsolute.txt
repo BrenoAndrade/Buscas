@@ -1,0 +1,10 @@
+C:\Users\breno\Desktop\Busca\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\breno\Desktop\Busca\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\breno\Desktop\Busca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\breno\Desktop\Busca\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\breno\Desktop\Busca\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\Users\breno\Desktop\539813_538450_\Biblioteca\bin\Debug\Biblioteca.dll
+C:\Users\breno\Desktop\539813_538450_\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\Users\breno\Desktop\539813_538450_\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\breno\Desktop\539813_538450_\Biblioteca\obj\Debug\Biblioteca.dll
+C:\Users\breno\Desktop\539813_538450_\Biblioteca\obj\Debug\Biblioteca.pdb
