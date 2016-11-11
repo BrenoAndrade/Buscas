@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buscas", "Buscas\Buscas.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Executar", "Executar\Executar.csproj", "{3F46DB33-DCF8-4DF5-B819-D918477F47E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{C4123019-30CC-4FB5-9688-6AB71037A126}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{3F46DB33-DCF8-4DF5-B819-D918477F47E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F46DB33-DCF8-4DF5-B819-D918477F47E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F46DB33-DCF8-4DF5-B819-D918477F47E8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C4123019-30CC-4FB5-9688-6AB71037A126}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C4123019-30CC-4FB5-9688-6AB71037A126}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C4123019-30CC-4FB5-9688-6AB71037A126}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C4123019-30CC-4FB5-9688-6AB71037A126}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
