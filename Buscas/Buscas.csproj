@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AEstrela.cs" />
     <Compile Include="AprofundamentoIterativo.cs" />
     <Compile Include="CustoUniforme.cs" />
+    <Compile Include="Gulosa.cs" />
     <Compile Include="Largura.cs" />
     <Compile Include="Profundidade.cs" />
     <Compile Include="ProfundidadeLimitada.cs" />

@@ -62,6 +62,12 @@ namespace Executar
                 case 5:
                     tResultado.Text += "Custo Uniforme";
                     break;
+                case 6:
+                    tResultado.Text += "Gulosa";
+                    break;
+                case 7:
+                    tResultado.Text += "A*";
+                    break;
             }
 
             tResultado.Text += System.Environment.NewLine + "Profundidade: " + aux[0]._profundidade;
@@ -116,6 +122,16 @@ namespace Executar
             return AprofundamentoIterativo.Buscar(aiInteiros);
         }
 
+        private List<No> BGulosa(int[] aiInteiros, bool h1)
+        {
+            return Gulosa.Buscar(aiInteiros, h1);
+        }
+
+        private List<No> BAEstrela(int[] aiInteiros, bool h1)
+        {
+            return AEstrela.Buscar(aiInteiros, h1);
+        }
+
         private int[] ObterVetor()
         {
             int[] vetor = { Convert.ToInt32(t0.Text), Convert.ToInt32(t1.Text), Convert.ToInt32(t2.Text), Convert.ToInt32(t3.Text),
@@ -128,10 +144,13 @@ namespace Executar
 
         private void button1_Click(object sender, EventArgs e)
         {
+            tResultado.Visible = true;
+            dtgTabela.Visible = false;
             tResultado.Text = "";
 
             int b = 0;
             int[] aiInteiros = ObterVetor();
+            bool h1 = false;
 
             var lst = new List<No>();
 
@@ -140,8 +159,34 @@ namespace Executar
             if (cbProfundidadeLimitada.Checked == true && tProfundidade.Text != "") { lst = BProfundidadeLimitada(aiInteiros, Convert.ToInt32(tProfundidade.Text)); b = 3; }
             if (cbAprofundamentoIterativo.Checked == true) {  lst = BAprofundamentoIterativo(aiInteiros) ; b = 4; }
             if (cbCustoUniforme.Checked == true) { lst = BCustoUniforme(aiInteiros); b = 5; }
+            if (cbGulosa.Checked == true) { if (cbH1.Checked == true) { h1 = true; } else if (cbH2.Checked == true) { h1 = false; } lst = BGulosa(aiInteiros, h1); b = 6; }
+            if (cbAEstrela.Checked == true) { if (cbH1.Checked == true) { h1 = true; } else if (cbH2.Checked == true) { h1 = false; } lst = BAEstrela(aiInteiros, h1); b = 7; }
 
             Print(lst, b);
+        }
+
+        private void btn2_Click(object sender, EventArgs e)
+        {
+            tResultado.Visible = false;
+            dtgTabela.Visible = true;
+            int[] aiInteiros = ObterVetor();
+
+            var gulosaH1 = BGulosa(aiInteiros, true);
+            var gulosaH2 = BGulosa(aiInteiros, false);
+            
+            var AEstrelaH1 = BAEstrela(aiInteiros, true);
+            var AEstrelaH2 = BAEstrela(aiInteiros, false);
+
+            tResultado.Text = "";
+            String g1, g2, a1, a2;
+             for (int i = 1, a = gulosaH1.Count - 1, b = gulosaH2.Count - 1, c = AEstrelaH1.Count - 1, d = AEstrelaH2.Count - 1; a >= -1 || b >= -1 || c >= -1 || d >= -1   ; i++, a--, b--, c--, d--)
+             {
+                if (a >= 0) { g1 = gulosaH1[a]._heuristica_1.ToString(); } else { g1 = ""; }
+                if (b >= 0) { g2 = gulosaH2[b]._heuristica_2.ToString(); } else { g2 = ""; }
+                if (c >= 0) { a1 = AEstrelaH1[c]._heuristica_1.ToString(); } else { a1 = ""; }
+                if (d >= 0) { a2 = AEstrelaH2[d]._heuristica_2.ToString(); } else { a2 = ""; }
+                dtgTabela.Rows.Add(i, g1, g2, a1, a2);
+             }
         }
     }
 }

@@ -7,6 +7,9 @@
         public int[] _estado = new int[16];
         public int _custoCaminho;
         public int _profundidade;
+        public int _heuristica_1;
+        public int _heuristica_2;
+        public int _heuristica_custo;
 
         public void Iniciar(int[] EstadoInicial)
         {

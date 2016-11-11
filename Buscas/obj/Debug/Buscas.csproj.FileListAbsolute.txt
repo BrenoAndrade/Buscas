@@ -12,3 +12,10 @@ C:\Users\breno\Desktop\539813_538450_\Buscas\bin\Debug\Biblioteca.pdb
 C:\Users\breno\Desktop\539813_538450_\Buscas\obj\Debug\Buscas.csprojResolveAssemblyReference.cache
 C:\Users\breno\Desktop\539813_538450_\Buscas\obj\Debug\Buscas.dll
 C:\Users\breno\Desktop\539813_538450_\Buscas\obj\Debug\Buscas.pdb
+C:\Users\breno\Desktop\Buscas\Buscas\bin\Debug\Buscas.dll
+C:\Users\breno\Desktop\Buscas\Buscas\bin\Debug\Buscas.pdb
+C:\Users\breno\Desktop\Buscas\Buscas\bin\Debug\Biblioteca.dll
+C:\Users\breno\Desktop\Buscas\Buscas\bin\Debug\Biblioteca.pdb
+C:\Users\breno\Desktop\Buscas\Buscas\obj\Debug\Buscas.csprojResolveAssemblyReference.cache
+C:\Users\breno\Desktop\Buscas\Buscas\obj\Debug\Buscas.dll
+C:\Users\breno\Desktop\Buscas\Buscas\obj\Debug\Buscas.pdb

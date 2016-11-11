@@ -35,6 +35,8 @@ namespace Biblioteca
                 no._custoCaminho = noBase._custoCaminho + 1;
                 no._profundidade = noBase._profundidade + 1;
                 no._estado = Subir(noBase._estado);
+                no._heuristica_1 = CalcularHeuristica_1(no);
+                no._heuristica_2 = CalcularHeuristica_2(no);
                 lst.Add(no);
             }
             
@@ -47,6 +49,8 @@ namespace Biblioteca
                 no._custoCaminho = noBase._custoCaminho + 1;
                 no._profundidade = noBase._profundidade + 1;
                 no._estado = Descer(noBase._estado);
+                no._heuristica_1 = CalcularHeuristica_1(no);
+                no._heuristica_2 = CalcularHeuristica_2(no);
                 lst.Add(no);
             }
             
@@ -59,6 +63,8 @@ namespace Biblioteca
                 no._custoCaminho = noBase._custoCaminho + 1;
                 no._profundidade = noBase._profundidade + 1;
                 no._estado = Direita(noBase._estado);
+                no._heuristica_1 = CalcularHeuristica_1(no);
+                no._heuristica_2 = CalcularHeuristica_2(no);
                 lst.Add(no);
             }
             
@@ -71,6 +77,8 @@ namespace Biblioteca
                 no._custoCaminho = noBase._custoCaminho + 1;
                 no._profundidade = noBase._profundidade + 1;
                 no._estado = Esquerda(noBase._estado);
+                no._heuristica_1 = CalcularHeuristica_1(no);
+                no._heuristica_2 = CalcularHeuristica_2(no);
                 lst.Add(no);
             }
 
@@ -163,6 +171,73 @@ namespace Biblioteca
             }
 
             return true;
+        }
+
+        public static int CalcularHeuristica_1(No noBase)
+        {
+            int cont = 0;
+
+            for (int i = 0; i <= 15; i++)
+            {
+                if(noBase._estado[i] != -1)
+                    if (noBase._estado[i] != (i + 1)) cont++;
+            }
+
+            return cont;
+        }
+
+        public static int CalcularHeuristica_2(No noBase)
+        {
+            int cont = 0;
+
+            for (int i = 0; i < 16; i++)
+            {
+                int objetivo;
+                if (noBase._estado[i] != -1) { objetivo = noBase._estado[i] - 1; } else { objetivo = -1; }
+
+                int  linha, coluna;
+                int[] arrayObjetivo = new int[2];
+                int[] arrayNo = new int[2];
+
+                if (objetivo != i && objetivo != -1)
+                {
+                    arrayNo = LinhaColuna(i);
+                    arrayObjetivo = LinhaColuna(objetivo);
+
+                    linha = arrayNo[0] - arrayObjetivo[0];
+                    coluna = arrayNo[1] - arrayObjetivo[1];
+
+                    if (linha < 0)
+                        linha = linha * -1;
+                    if (coluna < 0)
+                        coluna = coluna * -1;
+
+                    cont += linha + coluna;
+                }
+            }
+
+            return cont;
+        }
+
+        private static int[] LinhaColuna(int no)
+        {
+            int linha, coluna;
+            int[] pos = new int[2];
+
+            if (no <= 3) linha = 0;
+            else if (no <= 7) linha = 1;
+            else if (no <= 11) linha = 2;
+            else linha = 3;
+
+            if (no == 0 || no == 4 || no == 8 || no == 12) coluna = 0;
+            else if (no == 1 || no == 5 || no == 9 || no == 13) coluna = 1;
+            else if (no == 2 || no == 6 || no == 10 || no == 14) coluna = 2;
+            else coluna = 3;
+
+            pos[0] = linha;
+            pos[1] = coluna;
+
+            return pos;
         }
     }
 }

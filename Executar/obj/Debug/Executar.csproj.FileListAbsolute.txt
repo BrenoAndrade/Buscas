@@ -11,3 +11,16 @@ C:\Users\breno\Desktop\539813_538450_\Executar\bin\Debug\Biblioteca.dll
 C:\Users\breno\Desktop\539813_538450_\Executar\bin\Debug\Buscas.dll
 C:\Users\breno\Desktop\539813_538450_\Executar\bin\Debug\Biblioteca.pdb
 C:\Users\breno\Desktop\539813_538450_\Executar\bin\Debug\Buscas.pdb
+C:\Users\breno\Desktop\Buscas\Executar\bin\Debug\Executar.exe.config
+C:\Users\breno\Desktop\Buscas\Executar\obj\Debug\Executar.exe
+C:\Users\breno\Desktop\Buscas\Executar\obj\Debug\Executar.pdb
+C:\Users\breno\Desktop\Buscas\Executar\bin\Debug\Executar.exe
+C:\Users\breno\Desktop\Buscas\Executar\bin\Debug\Executar.pdb
+C:\Users\breno\Desktop\Buscas\Executar\bin\Debug\Biblioteca.dll
+C:\Users\breno\Desktop\Buscas\Executar\bin\Debug\Buscas.dll
+C:\Users\breno\Desktop\Buscas\Executar\bin\Debug\Biblioteca.pdb
+C:\Users\breno\Desktop\Buscas\Executar\bin\Debug\Buscas.pdb
+C:\Users\breno\Desktop\Buscas\Executar\obj\Debug\Executar.csprojResolveAssemblyReference.cache
+C:\Users\breno\Desktop\Buscas\Executar\obj\Debug\Executar.Form1.resources
+C:\Users\breno\Desktop\Buscas\Executar\obj\Debug\Executar.Properties.Resources.resources
+C:\Users\breno\Desktop\Buscas\Executar\obj\Debug\Executar.csproj.GenerateResource.Cache
